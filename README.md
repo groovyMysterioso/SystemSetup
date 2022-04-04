@@ -2,5 +2,5 @@
 
 To install, open PowerShell as Administrator and run:
 
-    Set-ExecutionPolicy unrestricted
-    ./deflate.ps11
+    Unblock-File ./deflate.ps1
+    ./deflate.ps1
