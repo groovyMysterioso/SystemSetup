@@ -80,8 +80,6 @@ Move-Item C:/Users/Public/Desktop/*.url "$HOME/Desktop/Program Manager"
 Move-Item C:/Users/james/Desktop/*.lnk "$HOME/Desktop/Program Manager"
 Move-Item C:/Users/james/Desktop/*.url "$HOME/Desktop/Program Manager"
 
-#Run ccleaner from application folder
-"C:\Program Files\CCleaner\CCleaner.exe"
 $elapsedTime = $(get-date) - $currentTime 
 
 $totalTime = "{0:HH:mm:ss}" -f ([datetime]$elapsedTime.Ticks)
