@@ -5,6 +5,8 @@ Write-Output "Install started: $currentTime"
 
 # 3D Viewer:
 Get-AppxPackage Microsoft.Microsoft3DViewer | Remove-AppxPackage
+# 3D Paint:
+Get-AppxPackage Microsoft.MSPaint | Remove-AppxPackage
 # Calculator:
 Get-AppxPackage *windowscalculator* | Remove-AppxPackage
 # 3D Builder:
@@ -29,6 +31,8 @@ Get-AppxPackage *zunemusic* | Remove-AppxPackage
 Get-AppxPackage *windowsmaps* | Remove-AppxPackage
 # Microsoft Solitaire Collection:
 # Get-AppxPackage *solitairecollection* | Remove-AppxPackage
+# Mixed Reality:
+Get-AppxPackage Microsoft.MixedReality.Portal | Remove-AppxPackage
 # Money:
 Get-AppxPackage *bingfinance* | Remove-AppxPackage
 # Movies & TV:
