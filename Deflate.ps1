@@ -19,6 +19,8 @@ Get-AppxPackage *windowsalarms* | Remove-AppxPackage
 Get-AppxPackage *windowscamera* | Remove-AppxPackage
 # Uninstall Get Help:
 Get-AppxPackage *Microsoft.GetHelp* -AllUsers | Remove-AppxPackage
+# Feedback Hub
+get-appxpackage *feedback* | remove-appxpackage
 # Get Office:
 Get-AppxPackage *officehub* | Remove-AppxPackage
 # Get Started:
