@@ -67,6 +67,9 @@ mkdir $HOME/Desktop/Program Manager
 
 #Move all shortcuts on desktop to folder called "Program Manager"
 Move-Item C:/Users/Public/Desktop/*.lnk "$HOME/Desktop/Program Manager"
+Move-Item C:/Users/Public/Desktop/*.url "$HOME/Desktop/Program Manager"
+Move-Item C:/Users/james/Desktop/*.lnk "$HOME/Desktop/Program Manager"
+Move-Item C:/Users/james/Desktop/*.url "$HOME/Desktop/Program Manager"
 
 #Run ccleaner from application folder
 C:\Program Files (x86)\CCleaner\CCleaner.exe
