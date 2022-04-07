@@ -1,3 +1,8 @@
+#Get current time
+$currentTime = Get-Date
+
+Write-Output "Install started: $currentTime"
+
 # 3D Viewer:
 Get-AppxPackage Microsoft.Microsoft3DViewer | Remove-AppxPackage
 # Calculator:
@@ -74,5 +79,10 @@ Move-Item C:/Users/james/Desktop/*.url "$HOME/Desktop/Program Manager"
 #Run ccleaner from application folder
 C:\Program Files (x86)\CCleaner\CCleaner.exe
 
+$elapsedTime = Get-Date -Difference $currentTime
+
+Write-Output "Install finished in: $elapsedTime"
+
 #Open gmail.com
 Start-Process chrome https://www.gmail.com
+
