@@ -41,8 +41,6 @@ Get-AppxPackage *zunevideo* | Remove-AppxPackage
 Get-AppxPackage *bingnews* | Remove-AppxPackage
 # OneNote:
 Get-AppxPackage *onenote* | Remove-AppxPackage
-# People:
-Get-AppxPackage *people* | Remove-AppxPackage
 # Phone Companion:
 Get-AppxPackage *windowsphone* | Remove-AppxPackage
 # Photos:
@@ -87,6 +85,3 @@ $elapsedTime = $(get-date) - $currentTime
 $totalTime = "{0:HH:mm:ss}" -f ([datetime]$elapsedTime.Ticks)
 
 Write-Output "Install finished in: $totalTime"
-
-#Open gmail.com
-Start-Process chrome https://www.gmail.com
