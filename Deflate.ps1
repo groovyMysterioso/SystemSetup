@@ -67,12 +67,12 @@ Get-AppxPackage -AllUsers Microsoft.XboxGamingOverlay | Remove-AppxPackage
 #Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-choco update chocolatey -y
+choco upgrade chocolatey -y
 
 choco install packages.config -y
 
 #Create new folder on deksktop called "Program Manager"
-mkdir $HOME/Desktop/Program Manager
+mkdir "$HOME/Desktop/Program Manager"
 
 #Move all shortcuts on desktop to folder called "Program Manager"
 Move-Item C:/Users/Public/Desktop/*.lnk "$HOME/Desktop/Program Manager"
@@ -81,12 +81,12 @@ Move-Item C:/Users/james/Desktop/*.lnk "$HOME/Desktop/Program Manager"
 Move-Item C:/Users/james/Desktop/*.url "$HOME/Desktop/Program Manager"
 
 #Run ccleaner from application folder
-C:\Program Files (x86)\CCleaner\CCleaner.exe
+"C:\Program Files\CCleaner\CCleaner.exe"
+$elapsedTime = $(get-date) - $currentTime 
 
-$elapsedTime = Get-Date -Difference $currentTime
+$totalTime = "{0:HH:mm:ss}" -f ([datetime]$elapsedTime.Ticks)
 
-Write-Output "Install finished in: $elapsedTime"
+Write-Output "Install finished in: $totalTime"
 
 #Open gmail.com
 Start-Process chrome https://www.gmail.com
-
